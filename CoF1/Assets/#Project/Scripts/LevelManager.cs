@@ -79,4 +79,11 @@ public class LevelManager : MonoBehaviour
         }
         cubes.Remove(cube);
     }
+    private void OnDrawGizmos()
+    {
+        //Gizmos.color = Color.magenta;
+        Gizmos.color = new Color(0f,0.5f,0.9f,0.5f);
+        Gizmos.DrawCube(transform.position + randomZone /2, randomZone);
+        Gizmos.DrawWireCube(transform.position + randomZone /2, randomZone);
+    }
 }
